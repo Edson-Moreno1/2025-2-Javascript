@@ -7,6 +7,32 @@
 
 const { ask } = require('../helpers/input');
 
+
+function obtenFecha(year){
+
+    const fechaactual= new Date;
+    const añoactual = fechaactual.getFullYear();
+    const años = year.getFullYear();
+    const Año=añoactual-años;
+    const dias = (añoactual-años);
+    const meses = (añoactual-años);
+
+
+
+    
+    return Año,dias,meses;
+    
+
+   
+}
+
+async function main() {
+
+    const year = new Date (await ask("Ingresa tu fecha"));
+    const Año= obtenFecha(year);
+    const dias= obtenFecha(year);
+    const meses = obtenFecha(year);
+
 function diffDays(actualDate, birthDate) {
   const diff = actualDate - birthDate;
   const edadEnDias = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -26,6 +52,14 @@ async function main() {
   console.log("Haz vivido aproximadamente: ");
   console.log(`${diffDays(actualDate, birthDate)} días`);
 
+
+   
+
+    console.log("Años cumplidos: ",Año)
+    console.log("Dias cumplidos: ",dias*364);
+    console.log("Meses cumplidos ",meses*12)
+
+ 
 }
 
 main();

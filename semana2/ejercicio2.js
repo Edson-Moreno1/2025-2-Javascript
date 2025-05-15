@@ -35,7 +35,7 @@ async function main() {
     } else {
       console.log('Opción no válida');
     }
-  }
+  } 
 }
 
 main();
