@@ -15,18 +15,29 @@ const {ask}= require ('../helpers/input');
 
 async function main (){
     const edades=[];
-
-    for(i=0;i<edades.length;i++){
-        if(edades[i]>18){
-            console.log(i);
-        }else{
-            console.log("No hay edades por mostrar");
-        }
-
-    }
     
+   let entrada = await ask("Ingresa una edad")
 
+   while(entrada !== ""){
+    const edad = Number(entrada);
 
+    if (!isNaN(edad)){
+        edades.push(edad);
+    }else{
+        console.log("Eso no es un número válido ");
+    }
+    entrada = await ask("ingresa otra edad ");
+   }
+
+   let puedeVotar = 0;
+
+   for(let i = 0; i<edades.length;i++){
+    if(edades[i]>=18){
+        puedeVotar++;
+    }
+   }
+
+   console.log(`Total de personas que pueden votar:${puedeVotar}`);
 
 
 }// fin de async function
