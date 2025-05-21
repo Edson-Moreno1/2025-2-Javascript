@@ -13,6 +13,7 @@
 //
 //La calificación más alta y la más baja
 
+
 const { ask } = require('../helpers/input');
 
 // 🎯 Función principal de análisis
