@@ -95,9 +95,9 @@ async function main() {
     alumnos[i].mostrarInfo();
   }
 
-  // alumno1.mostrarInfo();
-  // alumno2.mostrarInfo();
-  // alumno3.mostrarInfo();
+  alumno1.mostrarInfo();
+  alumno2.mostrarInfo();
+  alumno3.mostrarInfo();
 }
 
 main();
